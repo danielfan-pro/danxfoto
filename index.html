@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DanXFoto · Photography</title>
+  <meta name="description" content="DanXFoto — Wedding, Family & Portrait Photography in Boston, MA and beyond."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+  <!-- ══ NAVBAR ══ -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="logo">
+        <img src="images/logo.png" alt="DanXFoto logo" class="logo-img"/>
+        <div class="logo-divider"></div>
+        <div class="logo-text">
+          <span class="logo-name">Dan<em>X</em>Foto</span>
+          <span class="logo-tag">Photography · Boston MA</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact" class="btn-book">Book Now</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ══ HERO ══ -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <p class="hero-eyebrow">Wedding · Family · Portrait</p>
+      <h1 class="hero-title">Every moment<br>deserves to be <em>remembered</em></h1>
+      <div class="hero-divider">
+        <span class="div-line"></span>
+        <span class="div-diamond"></span>
+        <span class="div-line"></span>
+      </div>
+      <p class="hero-sub">Boston & Beyond · Available Worldwide</p>
+      <div class="hero-cta">
+        <a href="#portfolio" class="btn-primary">View Portfolio</a>
+        <a href="#contact" class="btn-ghost">Book a Session</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ══ PORTFOLIO ══ -->
+  <section id="portfolio" class="section portfolio">
+    <div class="section-header">
+      <p class="section-eyebrow">Selected Work</p>
+      <h2 class="section-title">Portfolio</h2>
+    </div>
+
+    <div class="portfolio-filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="wedding">Wedding</button>
+      <button class="filter-btn" data-filter="family">Family</button>
+      <button class="filter-btn" data-filter="portrait">Portrait</button>
+    </div>
+
+    <div class="portfolio-grid" id="portfolioGrid">
+      <!-- Items injected by JS — placeholders with category colors -->
+      <div class="portfolio-item wedding" data-cat="wedding">
+        <div class="portfolio-img" style="background:#e8d5c8;">
+          <div class="portfolio-overlay">
+            <span class="portfolio-cat">Wedding</span>
+            <h3>Golden Hour Ceremony</h3>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-item family tall" data-cat="family">
+        <div class="portfolio-img" style="background:#d8c8b8;">
+          <div class="portfolio-overlay">
+            <span class="portfolio-cat">Family</span>
+            <h3>The Johnson Family</h3>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-item portrait" data-cat="portrait">
+        <div class="portfolio-img" style="background:#c8b8a8;">
+          <div class="portfolio-overlay">
+            <span class="portfolio-cat">Portrait</span>
+            <h3>Studio Session</h3>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-item wedding wide" data-cat="wedding">
+        <div class="portfolio-img" style="background:#d8c0b0;">
+          <div class="portfolio-overlay">
+            <span class="portfolio-cat">Wedding</span>
+            <h3>Sunset Reception</h3>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-item portrait" data-cat="portrait">
+        <div class="portfolio-img" style="background:#e0cfc0;">
+          <div class="portfolio-overlay">
+            <span class="portfolio-cat">Portrait</span>
+            <h3>Maternity Session</h3>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-item family" data-cat="family">
+        <div class="portfolio-img" style="background:#ccc0b0;">
+          <div class="portfolio-overlay">
+            <span class="portfolio-cat">Family</span>
+            <h3>Autumn Portraits</h3>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-item wedding" data-cat="wedding">
+        <div class="portfolio-img" style="background:#dac5b5;">
+          <div class="portfolio-overlay">
+            <span class="portfolio-cat">Wedding</span>
+            <h3>First Dance</h3>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-item portrait tall" data-cat="portrait">
+        <div class="portfolio-img" style="background:#c5b5a5;">
+          <div class="portfolio-overlay">
+            <span class="portfolio-cat">Portrait</span>
+            <h3>Senior Portraits</h3>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-item family" data-cat="family">
+        <div class="portfolio-img" style="background:#d5c5b5;">
+          <div class="portfolio-overlay">
+            <span class="portfolio-cat">Family</span>
+            <h3>Newborn Session</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ ABOUT ══ -->
+  <section id="about" class="section about">
+    <div class="about-inner">
+      <div class="about-img-wrap">
+        <div class="about-img-placeholder">
+          <!-- Replace with your photo: <img src="images/dan.jpg" alt="Dan"/> -->
+          <div class="about-img-bg"></div>
+          <div class="about-img-frame"></div>
+        </div>
+      </div>
+      <div class="about-content">
+        <p class="section-eyebrow">About</p>
+        <h2 class="section-title">Hi, I'm Dan</h2>
+        <div class="about-divider">
+          <span class="div-line"></span>
+          <span class="div-diamond"></span>
+          <span class="div-line"></span>
+        </div>
+        <p class="about-text">
+          I'm a Boston-based photographer with a passion for capturing the moments that matter most — 
+          the quiet glances, the joyful tears, the unscripted laughter. Every family has a story worth telling, 
+          and I'm here to tell yours.
+        </p>
+        <p class="about-text">
+          With over a decade of experience in wedding, family, and portrait photography, 
+          I bring both technical precision and an artist's eye to every session. 
+          My approach is relaxed, personal, and always centered around you.
+        </p>
+        <div class="about-stats">
+          <div class="stat">
+            <span class="stat-num">500+</span>
+            <span class="stat-label">Weddings</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num">10+</span>
+            <span class="stat-label">Years</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num">50+</span>
+            <span class="stat-label">States</span>
+          </div>
+        </div>
+        <a href="#contact" class="btn-primary">Work With Me</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ SERVICES ══ -->
+  <section id="services" class="section services">
+    <div class="section-header">
+      <p class="section-eyebrow">What I Offer</p>
+      <h2 class="section-title">Services & Pricing</h2>
+    </div>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 40 40" fill="none">
+            <path d="M20 8 L32 14 L32 26 L20 32 L8 26 L8 14 Z" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="20" cy="20" r="5" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <h3 class="service-title">Portrait Session</h3>
+        <p class="service-price">From <strong>$299</strong></p>
+        <ul class="service-features">
+          <li>1–2 hour session</li>
+          <li>1 location of your choice</li>
+          <li>30+ edited photos</li>
+          <li>Online gallery delivery</li>
+          <li>Print release included</li>
+        </ul>
+        <a href="#contact" class="btn-service">Book Now</a>
+      </div>
+
+      <div class="service-card featured">
+        <div class="service-badge">Most Popular</div>
+        <div class="service-icon">
+          <svg viewBox="0 0 40 40" fill="none">
+            <path d="M8 30 Q20 8 32 30" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="20" cy="18" r="6" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M14 30 L26 30" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <h3 class="service-title">Family Session</h3>
+        <p class="service-price">From <strong>$499</strong></p>
+        <ul class="service-features">
+          <li>2–3 hour session</li>
+          <li>Up to 2 locations</li>
+          <li>60+ edited photos</li>
+          <li>Online gallery delivery</li>
+          <li>Print release included</li>
+          <li>1 complimentary print</li>
+        </ul>
+        <a href="#contact" class="btn-service">Book Now</a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 40 40" fill="none">
+            <path d="M12 20 C12 14 16 10 20 10 C24 10 28 14 28 20" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M8 28 L32 28" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="20" cy="20" r="4" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M20 24 L20 28" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <h3 class="service-title">Wedding Package</h3>
+        <p class="service-price">From <strong>$2,499</strong></p>
+        <ul class="service-features">
+          <li>Full-day coverage (8 hrs)</li>
+          <li>Engagement session included</li>
+          <li>400+ edited photos</li>
+          <li>Online gallery delivery</li>
+          <li>Print release included</li>
+          <li>Premium photo album</li>
+        </ul>
+        <a href="#contact" class="btn-service">Book Now</a>
+      </div>
+
+    </div>
+    <p class="services-note">All packages include a complimentary consultation. Custom packages available — <a href="#contact">let's talk</a>.</p>
+  </section>
+
+  <!-- ══ TESTIMONIALS ══ -->
+  <section class="section testimonials">
+    <div class="section-header">
+      <p class="section-eyebrow">Kind Words</p>
+      <h2 class="section-title">Client Love</h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"Dan captured our wedding day perfectly. Every photo tells a story — we cried happy tears looking through the gallery."</p>
+        <span class="testimonial-author">— Sarah & Michael, Boston</span>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"Our family session was so relaxed and fun. Dan has a gift for making kids feel at ease. The photos are absolutely stunning."</p>
+        <span class="testimonial-author">— The Martinez Family</span>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"Professional, talented, and genuinely caring. DanXFoto is the only photographer I'll ever use for our family portraits."</p>
+        <span class="testimonial-author">— Emily T., Cambridge MA</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CONTACT ══ -->
+  <section id="contact" class="section contact">
+    <div class="contact-inner">
+      <div class="contact-info">
+        <p class="section-eyebrow">Get In Touch</p>
+        <h2 class="section-title">Let's Create<br><em>Something Beautiful</em></h2>
+        <div class="about-divider">
+          <span class="div-line"></span>
+          <span class="div-diamond"></span>
+          <span class="div-line"></span>
+        </div>
+        <p class="contact-text">Whether you're planning a wedding, a family session, or a personal portrait — I'd love to hear from you. Let's talk about your vision.</p>
+        <div class="contact-details">
+          <div class="contact-item">
+            <span class="contact-label">Email</span>
+            <a href="mailto:hello@danxfoto.com">hello@danxfoto.com</a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">Phone</span>
+            <a href="tel:+16175550123">(617) 555-0123</a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">Based in</span>
+            <span>Boston, MA · Available Worldwide</span>
+          </div>
+        </div>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram">Ig</a>
+          <a href="#" aria-label="Facebook">Fb</a>
+          <a href="#" aria-label="Pinterest">Pi</a>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Jane Smith" required/>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="jane@email.com" required/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="service">Session Type</label>
+          <select id="service" name="service">
+            <option value="">Select a service...</option>
+            <option value="wedding">Wedding</option>
+            <option value="family">Family</option>
+            <option value="portrait">Portrait</option>
+            <option value="other">Other / Custom</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="date">Preferred Date</label>
+          <input type="date" id="date" name="date"/>
+        </div>
+        <div class="form-group">
+          <label for="message">Tell Me About Your Vision</label>
+          <textarea id="message" name="message" rows="5" placeholder="Share any details about your session — location ideas, must-have shots, or anything else..."></textarea>
+        </div>
+        <button type="submit" class="btn-primary btn-submit">Send Message</button>
+        <p class="form-note">I typically respond within 24 hours.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ══ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <img src="images/logo.png" alt="DanXFoto" class="footer-logo-img"/>
+        <span class="footer-name">DanXFoto</span>
+      </div>
+      <p class="footer-copy">© 2025 DanXFoto Photography · Boston, MA · All rights reserved</p>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
