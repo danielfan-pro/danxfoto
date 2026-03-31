@@ -13,6 +13,7 @@ danxfoto/
 │   └── main.js         ← Interactions & animations
 ├── images/
 │   └── logo.png        ← ⚠️ Add your logo PNG here!
+├── favicon.svg
 └── README.md
 ```
 
