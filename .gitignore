@@ -1,1 +1,10 @@
+# ⚠️ Credentials — DO NOT commit
+js/config.js
+
+# System files
 .DS_Store
+Thumbs.db
+
+# Editor folders
+.vscode/
+.idea/
