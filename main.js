@@ -69,24 +69,31 @@ document.querySelectorAll(
   revealObserver.observe(el);
 });
 
-// ── Contact form ──
+// ── Contact form (EmailJS) ──
 const form = document.getElementById('contactForm');
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   const btn = form.querySelector('.btn-submit');
   btn.textContent = 'Sending...';
   btn.disabled = true;
-  // Simulate send (replace with EmailJS or Formspree in production)
-  setTimeout(() => {
-    btn.textContent = '✓ Message Sent!';
-    btn.style.background = '#6a9060';
-    form.reset();
-    setTimeout(() => {
-      btn.textContent = 'Send Message';
-      btn.style.background = '';
+
+  emailjs.sendForm(_cfg.si, _cfg.ti, form)
+    .then(() => {
+      btn.textContent = '✓ Message Sent!';
+      btn.style.background = '#6a9060';
+      form.reset();
+      setTimeout(() => {
+        btn.textContent = 'Send Message';
+        btn.style.background = '';
+        btn.disabled = false;
+      }, 4000);
+    })
+    .catch((err) => {
+      console.error('EmailJS error:', err);
+      btn.textContent = 'Failed — Try Again';
+      btn.style.background = '#c04040';
       btn.disabled = false;
-    }, 4000);
-  }, 1200);
+    });
 });
 
 // ── Smooth scroll for all anchor links ──
