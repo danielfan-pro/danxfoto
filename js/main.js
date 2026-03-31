@@ -15,7 +15,6 @@ hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('open');
   navLinks.classList.toggle('open');
 });
-// Close menu on link click
 navLinks.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
     hamburger.classList.remove('open');
@@ -69,24 +68,38 @@ document.querySelectorAll(
   revealObserver.observe(el);
 });
 
-// ── Contact form ──
-const form = document.getElementById('contactForm');
-form.addEventListener('submit', (e) => {
+// ── Set minimum date to today ──
+const dateInput = document.getElementById('date');
+if (dateInput) {
+  const today = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
+  dateInput.min = today;
+}
+
+// ── Contact form (EmailJS) ──
+const contactForm = document.getElementById('contactForm');
+contactForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  const btn = form.querySelector('.btn-submit');
+  const btn = contactForm.querySelector('.btn-submit');
   btn.textContent = 'Sending...';
   btn.disabled = true;
-  // Simulate send (replace with EmailJS or Formspree in production)
-  setTimeout(() => {
-    btn.textContent = '✓ Message Sent!';
-    btn.style.background = '#6a9060';
-    form.reset();
-    setTimeout(() => {
-      btn.textContent = 'Send Message';
-      btn.style.background = '';
+
+  emailjs.sendForm('service_df7pali', 'template_48bu2cf', contactForm)
+    .then(() => {
+      btn.textContent = '✓ Message Sent!';
+      btn.style.background = '#6a9060';
+      contactForm.reset();
+      setTimeout(() => {
+        btn.textContent = 'Send Message';
+        btn.style.background = '';
+        btn.disabled = false;
+      }, 4000);
+    })
+    .catch((err) => {
+      console.error('EmailJS error:', err);
+      btn.textContent = 'Failed — Try Again';
+      btn.style.background = '#c04040';
       btn.disabled = false;
-    }, 4000);
-  }, 1200);
+    });
 });
 
 // ── Smooth scroll for all anchor links ──
