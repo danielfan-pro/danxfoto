@@ -71,34 +71,85 @@ document.querySelectorAll(
 // ── Set minimum date to today ──
 const dateInput = document.getElementById('date');
 if (dateInput) {
-  const today = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
+  const today = new Date().toISOString().split('T')[0];
   dateInput.min = today;
 }
+
+// ── Email validation ──
+const emailInput = document.getElementById('email');
+const emailError = document.createElement('span');
+emailError.className = 'field-error';
+emailError.textContent = 'Please enter a valid email address';
+emailInput.parentNode.appendChild(emailError);
+
+function isValidEmail(email) {
+  // Must have: chars @ chars . chars — covers 99% of real addresses
+  return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email.trim());
+}
+
+emailInput.addEventListener('blur', () => {
+  if (emailInput.value && !isValidEmail(emailInput.value)) {
+    emailInput.classList.add('input-error');
+    emailError.classList.add('visible');
+  } else {
+    emailInput.classList.remove('input-error');
+    emailError.classList.remove('visible');
+  }
+});
+
+emailInput.addEventListener('input', () => {
+  if (isValidEmail(emailInput.value)) {
+    emailInput.classList.remove('input-error');
+    emailError.classList.remove('visible');
+  }
+});
 
 // ── Contact form (EmailJS) ──
 const contactForm = document.getElementById('contactForm');
 contactForm.addEventListener('submit', (e) => {
   e.preventDefault();
+
+  // Block submit if email is invalid
+  if (!isValidEmail(emailInput.value)) {
+    emailInput.classList.add('input-error');
+    emailError.classList.add('visible');
+    emailInput.focus();
+    return;
+  }
+
   const btn = contactForm.querySelector('.btn-submit');
+  const statusMsg = document.getElementById('formStatus');
+
   btn.textContent = 'Sending...';
   btn.disabled = true;
+  statusMsg.className = 'form-status';
+  statusMsg.textContent = '';
 
   emailjs.sendForm(_cfg.si, _cfg.ti, contactForm)
     .then(() => {
-      btn.textContent = '✓ Message Sent!';
-      btn.style.background = '#6a9060';
+      btn.textContent = 'Send Message';
+      btn.disabled = false;
       contactForm.reset();
-      setTimeout(() => {
-        btn.textContent = 'Send Message';
-        btn.style.background = '';
-        btn.disabled = false;
-      }, 4000);
+      statusMsg.className = 'form-status success';
+      statusMsg.textContent = '✓ Message sent! I\'ll be in touch within 24 hours.';
+      // Auto-hide success message after 6 seconds
+      setTimeout(() => { statusMsg.textContent = ''; statusMsg.className = 'form-status'; }, 6000);
     })
     .catch((err) => {
       console.error('EmailJS error:', err);
-      btn.textContent = 'Failed — Try Again';
-      btn.style.background = '#c04040';
+      btn.textContent = 'Send Message';
       btn.disabled = false;
+      statusMsg.className = 'form-status error';
+      // Show different messages based on error type
+      if (!navigator.onLine) {
+        statusMsg.textContent = '✗ No internet connection. Please check your network and try again.';
+      } else if (err.status === 400) {
+        statusMsg.textContent = '✗ Something went wrong with the form. Please try again.';
+      } else if (err.status === 429) {
+        statusMsg.textContent = '✗ Too many requests. Please wait a few minutes and try again.';
+      } else {
+        statusMsg.textContent = '✗ Failed to send. Please email me directly at hello@danxfoto.com';
+      }
     });
 });
 
