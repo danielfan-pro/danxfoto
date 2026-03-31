@@ -83,7 +83,7 @@ contactForm.addEventListener('submit', (e) => {
   btn.textContent = 'Sending...';
   btn.disabled = true;
 
-  emailjs.sendForm('service_df7pali', 'template_48bu2cf', contactForm)
+  emailjs.sendForm(_cfg.si, _cfg.ti, contactForm)
     .then(() => {
       btn.textContent = '✓ Message Sent!';
       btn.style.background = '#6a9060';
