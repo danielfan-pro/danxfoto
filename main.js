@@ -77,14 +77,22 @@ if (dateInput) {
  
 // ── Contact form (EmailJS) ──
 const contactForm = document.getElementById('contactForm');
+console.log('contactForm found:', contactForm);
+
 contactForm.addEventListener('submit', (e) => {
   e.preventDefault();
+  console.log('Submit triggered!');
+  
   const btn = contactForm.querySelector('.btn-submit');
   btn.textContent = 'Sending...';
   btn.disabled = true;
- 
+
+  console.log('About to call emailjs.sendForm...');
+  console.log('emailjs available:', typeof emailjs);
+
   emailjs.sendForm('service_df7pali', 'template_48bu2cf', contactForm)
-    .then(() => {
+    .then((response) => {
+      console.log('EmailJS SUCCESS:', response);
       btn.textContent = '✓ Message Sent!';
       btn.style.background = '#6a9060';
       contactForm.reset();
@@ -95,7 +103,9 @@ contactForm.addEventListener('submit', (e) => {
       }, 4000);
     })
     .catch((err) => {
-      console.error('EmailJS error:', err);
+      console.log('EmailJS FAILED:', err);
+      console.log('Error status:', err.status);
+      console.log('Error text:', err.text);
       btn.textContent = 'Failed — Try Again';
       btn.style.background = '#c04040';
       btn.disabled = false;
