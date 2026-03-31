@@ -4,7 +4,7 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>DanXFoto · Photography</title>
-  <meta name="description" content="DanXFoto — Wedding, Family & Portrait Photography in Boston, MA and beyond."/>
+  <meta name="description" content="DanXFoto — Family & Portrait Photography in Boston, MA and beyond."/>
   <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="shortcut icon" href="/favicon.ico" />
@@ -43,7 +43,7 @@
   <!-- ══ HERO ══ -->
   <section id="home" class="hero">
     <div class="hero-content">
-      <p class="hero-eyebrow">Wedding · Family · Portrait</p>
+      <p class="hero-eyebrow">Family · Portrait</p>
       <h1 class="hero-title">Every moment<br>deserves to be <em>remembered</em></h1>
       <div class="hero-divider">
         <span class="div-line"></span>
@@ -71,21 +71,12 @@
 
     <div class="portfolio-filters">
       <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="wedding">Wedding</button>
       <button class="filter-btn" data-filter="family">Family</button>
       <button class="filter-btn" data-filter="portrait">Portrait</button>
     </div>
 
     <div class="portfolio-grid" id="portfolioGrid">
       <!-- Items injected by JS — placeholders with category colors -->
-      <div class="portfolio-item wedding" data-cat="wedding">
-        <div class="portfolio-img" style="background:#e8d5c8;">
-          <div class="portfolio-overlay">
-            <span class="portfolio-cat">Wedding</span>
-            <h3>Golden Hour Ceremony</h3>
-          </div>
-        </div>
-      </div>
       <div class="portfolio-item family tall" data-cat="family">
         <div class="portfolio-img" style="background:#d8c8b8;">
           <div class="portfolio-overlay">
@@ -102,14 +93,6 @@
           </div>
         </div>
       </div>
-      <div class="portfolio-item wedding wide" data-cat="wedding">
-        <div class="portfolio-img" style="background:#d8c0b0;">
-          <div class="portfolio-overlay">
-            <span class="portfolio-cat">Wedding</span>
-            <h3>Sunset Reception</h3>
-          </div>
-        </div>
-      </div>
       <div class="portfolio-item portrait" data-cat="portrait">
         <div class="portfolio-img" style="background:#e0cfc0;">
           <div class="portfolio-overlay">
@@ -123,14 +106,6 @@
           <div class="portfolio-overlay">
             <span class="portfolio-cat">Family</span>
             <h3>Autumn Portraits</h3>
-          </div>
-        </div>
-      </div>
-      <div class="portfolio-item wedding" data-cat="wedding">
-        <div class="portfolio-img" style="background:#dac5b5;">
-          <div class="portfolio-overlay">
-            <span class="portfolio-cat">Wedding</span>
-            <h3>First Dance</h3>
           </div>
         </div>
       </div>
@@ -182,7 +157,7 @@
         <div class="about-stats">
           <div class="stat">
             <span class="stat-num">500+</span>
-            <span class="stat-label">Weddings</span>
+            <span class="stat-label">Sessions</span>
           </div>
           <div class="stat-divider"></div>
           <div class="stat">
@@ -249,28 +224,6 @@
         <a href="#contact" class="btn-service">Book Now</a>
       </div>
 
-      <div class="service-card">
-        <div class="service-icon">
-          <svg viewBox="0 0 40 40" fill="none">
-            <path d="M12 20 C12 14 16 10 20 10 C24 10 28 14 28 20" stroke="currentColor" stroke-width="1.5"/>
-            <path d="M8 28 L32 28" stroke="currentColor" stroke-width="1.5"/>
-            <circle cx="20" cy="20" r="4" stroke="currentColor" stroke-width="1.5"/>
-            <path d="M20 24 L20 28" stroke="currentColor" stroke-width="1.5"/>
-          </svg>
-        </div>
-        <h3 class="service-title">Wedding Package</h3>
-        <p class="service-price">From <strong>$2,499</strong></p>
-        <ul class="service-features">
-          <li>Full-day coverage (8 hrs)</li>
-          <li>Engagement session included</li>
-          <li>400+ edited photos</li>
-          <li>Online gallery delivery</li>
-          <li>Print release included</li>
-          <li>Premium photo album</li>
-        </ul>
-        <a href="#contact" class="btn-service">Book Now</a>
-      </div>
-
     </div>
     <p class="services-note">All packages include a complimentary consultation. Custom packages available — <a href="#contact">let's talk</a>.</p>
   </section>
@@ -282,11 +235,6 @@
       <h2 class="section-title">Client Love</h2>
     </div>
     <div class="testimonials-grid">
-      <div class="testimonial-card">
-        <div class="stars">★★★★★</div>
-        <p class="testimonial-text">"Dan captured our wedding day perfectly. Every photo tells a story — we cried happy tears looking through the gallery."</p>
-        <span class="testimonial-author">— Sarah & Michael, Boston</span>
-      </div>
       <div class="testimonial-card">
         <div class="stars">★★★★★</div>
         <p class="testimonial-text">"Our family session was so relaxed and fun. Dan has a gift for making kids feel at ease. The photos are absolutely stunning."</p>
@@ -311,7 +259,7 @@
           <span class="div-diamond"></span>
           <span class="div-line"></span>
         </div>
-        <p class="contact-text">Whether you're planning a wedding, a family session, or a personal portrait — I'd love to hear from you. Let's talk about your vision.</p>
+        <p class="contact-text">Whether you're planning a family session or a personal portrait — I'd love to hear from you. Let's talk about your vision.</p>
         <div class="contact-details">
           <div class="contact-item">
             <span class="contact-label">Email</span>
@@ -348,7 +296,6 @@
           <label for="service">Session Type</label>
           <select id="service" name="service">
             <option value="">Select a service...</option>
-            <option value="wedding">Wedding</option>
             <option value="family">Family</option>
             <option value="portrait">Portrait</option>
             <option value="other">Other / Custom</option>
