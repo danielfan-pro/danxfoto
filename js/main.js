@@ -68,6 +68,18 @@ document.querySelectorAll(
   revealObserver.observe(el);
 });
 
+// ── Lightbox (GLightbox) ──
+const lightbox = GLightbox({
+  touchNavigation: true,
+  loop: true,
+  autoplayVideos: false,
+  closeOnOutsideClick: true,
+  keyboardNavigation: true,
+  cssEfects: {
+    fade: { in: 'fadeIn', out: 'fadeOut' },
+  },
+});
+
 // ── Set minimum date to today ──
 const dateInput = document.getElementById('date');
 if (dateInput) {
@@ -83,7 +95,6 @@ emailError.textContent = 'Please enter a valid email address';
 emailInput.parentNode.appendChild(emailError);
 
 function isValidEmail(email) {
-  // Must have: chars @ chars . chars — covers 99% of real addresses
   return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email.trim());
 }
 
@@ -109,7 +120,6 @@ const contactForm = document.getElementById('contactForm');
 contactForm.addEventListener('submit', (e) => {
   e.preventDefault();
 
-  // Block submit if email is invalid
   if (!isValidEmail(emailInput.value)) {
     emailInput.classList.add('input-error');
     emailError.classList.add('visible');
@@ -132,7 +142,6 @@ contactForm.addEventListener('submit', (e) => {
       contactForm.reset();
       statusMsg.className = 'form-status success';
       statusMsg.textContent = '✓ Message sent! I\'ll be in touch within 24 hours.';
-      // Auto-hide success message after 6 seconds
       setTimeout(() => { statusMsg.textContent = ''; statusMsg.className = 'form-status'; }, 6000);
     })
     .catch((err) => {
@@ -140,7 +149,6 @@ contactForm.addEventListener('submit', (e) => {
       btn.textContent = 'Send Message';
       btn.disabled = false;
       statusMsg.className = 'form-status error';
-      // Show different messages based on error type
       if (!navigator.onLine) {
         statusMsg.textContent = '✗ No internet connection. Please check your network and try again.';
       } else if (err.status === 400) {
