@@ -11,15 +11,44 @@ window.addEventListener('scroll', () => {
 // ── Mobile hamburger menu ──
 const hamburger = document.getElementById('hamburger');
 const navLinks  = document.querySelector('.nav-links');
+let menuScrollY = 0;
+
+function setMenuOpen(isOpen) {
+  if (isOpen) {
+    menuScrollY = window.scrollY;
+    document.body.style.top = `-${menuScrollY}px`;
+  }
+
+  hamburger.classList.toggle('open', isOpen);
+  navLinks.classList.toggle('open', isOpen);
+  document.body.classList.toggle('menu-open', isOpen);
+  hamburger.setAttribute('aria-expanded', String(isOpen));
+
+  if (!isOpen) {
+    const previousScrollBehavior = document.documentElement.style.scrollBehavior;
+    document.documentElement.style.scrollBehavior = 'auto';
+    document.body.style.top = '';
+    window.scrollTo(0, menuScrollY);
+    requestAnimationFrame(() => {
+      document.documentElement.style.scrollBehavior = previousScrollBehavior;
+    });
+  }
+}
+
 hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('open');
-  navLinks.classList.toggle('open');
+  setMenuOpen(!navLinks.classList.contains('open'));
 });
+
 navLinks.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
-    hamburger.classList.remove('open');
-    navLinks.classList.remove('open');
+    setMenuOpen(false);
   });
+});
+
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 768 && navLinks.classList.contains('open')) {
+    setMenuOpen(false);
+  }
 });
 
 // ── Active nav link on scroll ──
