@@ -1,9 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.danxfoto.com/</loc>
     <lastmod>2026-04-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.danxfoto.com/images/boston-studio-portrait-session.jpg</image:loc>
+      <image:title>Boston studio portrait session</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.danxfoto.com/images/greater-boston-creative-portrait-session.jpg</image:loc>
+      <image:title>Greater Boston creative portrait session</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.danxfoto.com/images/boston-chinese-new-year-family-portraits.jpg</image:loc>
+      <image:title>Boston Chinese New Year family portraits</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.danxfoto.com/images/boston-recital-portrait-photography.jpg</image:loc>
+      <image:title>Boston recital portrait photography</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.danxfoto.com/images/greater-boston-christmas-family-session.jpg</image:loc>
+      <image:title>Greater Boston Christmas family session</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.danxfoto.com/images/elegant-boston-recital-portrait-session.jpg</image:loc>
+      <image:title>Elegant Boston recital portrait session</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.danxfoto.com/images/boston-winter-portrait-session.jpg</image:loc>
+      <image:title>Boston winter portrait session</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.danxfoto.com/images/dan-boston-family-portrait-photographer.jpg</image:loc>
+      <image:title>Dan, Boston family and portrait photographer</image:title>
+    </image:image>
   </url>
 </urlset>

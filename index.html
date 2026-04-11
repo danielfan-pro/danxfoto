@@ -27,10 +27,6 @@
   <link rel="stylesheet" href="css/style.css"/>
   <!-- GLightbox -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"/>
-  <!-- EmailJS -->
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <script src="js/config.js"></script>
-  <script>emailjs.init(_cfg.pk);</script>
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -81,7 +77,7 @@
   <nav id="navbar">
     <div class="nav-inner">
       <a href="#home" class="logo">
-        <img src="images/logo.png" alt="DanXFoto logo" class="logo-img"/>
+        <img src="images/logo.png" alt="DanXFoto logo" class="logo-img" width="1980" height="883" decoding="async"/>
         <div class="logo-divider"></div>
         <div class="logo-text">
           <span class="logo-name">Dan<em>X</em>Foto</span>
@@ -140,7 +136,10 @@
       <div class="portfolio-item portrait" data-cat="portrait">
         <a href="images/boston-studio-portrait-session.jpg" class="glightbox" data-gallery="portfolio" data-title="Studio Session">
           <div class="portfolio-img">
-            <img src="images/boston-studio-portrait-session.jpg" alt="Studio portrait session by DanXFoto in Boston" style="object-position: top center;" loading="lazy"/>
+            <picture>
+              <source type="image/webp" srcset="images/boston-studio-portrait-session-1400.webp 1400w" sizes="(max-width: 480px) 88vw, (max-width: 768px) 44vw, (max-width: 1024px) 480px, 400px"/>
+              <img src="images/boston-studio-portrait-session-1400.jpg" srcset="images/boston-studio-portrait-session-1400.jpg 1400w, images/boston-studio-portrait-session.jpg 2000w" sizes="(max-width: 480px) 88vw, (max-width: 768px) 44vw, (max-width: 1024px) 480px, 400px" width="1400" height="1412" alt="Studio portrait session by DanXFoto in Boston" style="object-position: top center;" loading="lazy" decoding="async"/>
+            </picture>
             <div class="portfolio-overlay">
               <span class="portfolio-cat">Portrait</span>
               <h3>Studio Session</h3>
@@ -152,7 +151,10 @@
       <div class="portfolio-item portrait" data-cat="portrait">
         <a href="images/greater-boston-creative-portrait-session.jpg" class="glightbox" data-gallery="portfolio" data-title="Studio Session">
           <div class="portfolio-img">
-            <img src="images/greater-boston-creative-portrait-session.jpg" alt="Creative portrait photography session in the Greater Boston Area" style="object-position: center 20%;" loading="lazy"/>
+            <picture>
+              <source type="image/webp" srcset="images/greater-boston-creative-portrait-session.webp"/>
+              <img src="images/greater-boston-creative-portrait-session.jpg" width="1200" height="1327" alt="Creative portrait photography session in the Greater Boston Area" style="object-position: center 20%;" loading="lazy" decoding="async"/>
+            </picture>
             <div class="portfolio-overlay">
               <span class="portfolio-cat">Portrait</span>
               <h3>Studio Session</h3>
@@ -164,7 +166,10 @@
       <div class="portfolio-item family" data-cat="family">
         <a href="images/boston-chinese-new-year-family-portraits.jpg" class="glightbox" data-gallery="portfolio" data-title="Chinese New Year Portraits">
           <div class="portfolio-img">
-            <img src="images/boston-chinese-new-year-family-portraits.jpg" alt="Chinese New Year family portraits by DanXFoto in Boston" loading="lazy"/>
+            <picture>
+              <source type="image/webp" srcset="images/boston-chinese-new-year-family-portraits-1400.webp 1400w" sizes="(max-width: 480px) 88vw, (max-width: 768px) 44vw, (max-width: 1024px) 480px, 400px"/>
+              <img src="images/boston-chinese-new-year-family-portraits-1400.jpg" srcset="images/boston-chinese-new-year-family-portraits-1400.jpg 1400w, images/boston-chinese-new-year-family-portraits.jpg 2000w" sizes="(max-width: 480px) 88vw, (max-width: 768px) 44vw, (max-width: 1024px) 480px, 400px" width="1400" height="1206" alt="Chinese New Year family portraits by DanXFoto in Boston" loading="lazy" decoding="async"/>
+            </picture>
             <div class="portfolio-overlay">
               <span class="portfolio-cat">Family</span>
               <h3>Chinese New Year Portraits</h3>
@@ -176,7 +181,10 @@
       <div class="portfolio-item portrait tall" data-cat="portrait">
         <a href="images/boston-recital-portrait-photography.jpg" class="glightbox" data-gallery="portfolio" data-title="Recital Portraits">
           <div class="portfolio-img">
-            <img src="images/boston-recital-portrait-photography.jpg" alt="Recital portrait photography in Boston" style="object-position: center 20%;" loading="lazy"/>
+            <picture>
+              <source type="image/webp" srcset="images/boston-recital-portrait-photography.webp"/>
+              <img src="images/boston-recital-portrait-photography.jpg" width="1158" height="2000" alt="Recital portrait photography in Boston" style="object-position: center 20%;" loading="lazy" decoding="async"/>
+            </picture>
             <div class="portfolio-overlay">
               <span class="portfolio-cat">Portrait</span>
               <h3>Recital Portraits</h3>
@@ -188,7 +196,10 @@
       <div class="portfolio-item family" data-cat="family">
         <a href="images/greater-boston-christmas-family-session.jpg" class="glightbox" data-gallery="portfolio" data-title="Christmas Session">
           <div class="portfolio-img">
-            <img src="images/greater-boston-christmas-family-session.jpg" alt="Christmas family photography session in the Greater Boston Area" loading="lazy"/>
+            <picture>
+              <source type="image/webp" srcset="images/greater-boston-christmas-family-session-1400.webp 1400w" sizes="(max-width: 480px) 88vw, (max-width: 768px) 44vw, (max-width: 1024px) 480px, 400px"/>
+              <img src="images/greater-boston-christmas-family-session-1400.jpg" srcset="images/greater-boston-christmas-family-session-1400.jpg 1400w, images/greater-boston-christmas-family-session.jpg 2000w" sizes="(max-width: 480px) 88vw, (max-width: 768px) 44vw, (max-width: 1024px) 480px, 400px" width="1400" height="933" alt="Christmas family photography session in the Greater Boston Area" loading="lazy" decoding="async"/>
+            </picture>
             <div class="portfolio-overlay">
               <span class="portfolio-cat">Family</span>
               <h3>Christmas Session</h3>
@@ -200,7 +211,10 @@
       <div class="portfolio-item portrait tall" data-cat="portrait">
         <a href="images/elegant-boston-recital-portrait-session.jpg" class="glightbox" data-gallery="portfolio" data-title="Recital Portraits">
           <div class="portfolio-img">
-            <img src="images/elegant-boston-recital-portrait-session.jpg" alt="Elegant recital portrait session by DanXFoto" style="object-position: center 40%;" loading="lazy"/>
+            <picture>
+              <source type="image/webp" srcset="images/elegant-boston-recital-portrait-session.webp"/>
+              <img src="images/elegant-boston-recital-portrait-session.jpg" width="1500" height="1886" alt="Elegant recital portrait session by DanXFoto" style="object-position: center 40%;" loading="lazy" decoding="async"/>
+            </picture>
             <div class="portfolio-overlay">
               <span class="portfolio-cat">Portrait</span>
               <h3>Recital Portraits</h3>
@@ -212,7 +226,10 @@
       <div class="portfolio-item portrait" data-cat="portrait">
         <a href="images/boston-winter-portrait-session.jpg" class="glightbox" data-gallery="portfolio" data-title="Winter Portrait">
           <div class="portfolio-img">
-            <img src="images/boston-winter-portrait-session.jpg" alt="Winter portrait photography session in Boston" loading="lazy"/>
+            <picture>
+              <source type="image/webp" srcset="images/boston-winter-portrait-session.webp"/>
+              <img src="images/boston-winter-portrait-session.jpg" width="1000" height="1000" alt="Winter portrait photography session in Boston" loading="lazy" decoding="async"/>
+            </picture>
             <div class="portfolio-overlay">
               <span class="portfolio-cat">Portrait</span>
               <h3>Winter Portrait</h3>
@@ -229,7 +246,10 @@
     <div class="about-inner">
       <div class="about-img-wrap">
         <div class="about-img-placeholder">
-          <img src="images/dan-boston-family-portrait-photographer.jpg" alt="Dan, Boston family and portrait photographer"/>
+          <picture>
+            <source type="image/webp" srcset="images/dan-boston-family-portrait-photographer-1200.webp 1200w" sizes="(max-width: 768px) 320px, (max-width: 1024px) 380px, 520px"/>
+            <img src="images/dan-boston-family-portrait-photographer-1200.jpg" srcset="images/dan-boston-family-portrait-photographer-1200.jpg 1200w, images/dan-boston-family-portrait-photographer.jpg 1500w" sizes="(max-width: 768px) 320px, (max-width: 1024px) 380px, 520px" width="1200" height="1238" alt="Dan, Boston family and portrait photographer" loading="lazy" decoding="async"/>
+          </picture>
           <div class="about-img-frame"></div>
         </div>
       </div>
@@ -354,9 +374,9 @@
           </div>
         </div>
         <div class="social-links">
-          <a href="https://www.instagram.com/danxfoto/" aria-label="Instagram"><img src="images/instagram-logo.svg" width="24" alt="Instagram" loading="lazy"/></a>
-          <a href="https://www.facebook.com/danxfoto/" aria-label="Facebook"><img src="images/facebook-logo.svg" width="24" alt="Facebook" loading="lazy"/></a>
-          <a href="https://www.linkedin.com/company/danxfoto/" aria-label="LinkedIn"><img src="images/linkedin-logo.svg" width="24" alt="LinkedIn" loading="lazy"/></a>
+          <a href="https://www.instagram.com/danxfoto/" aria-label="Instagram"><img src="images/instagram-logo.svg" width="24" height="24" alt="Instagram" loading="lazy" decoding="async"/></a>
+          <a href="https://www.facebook.com/danxfoto/" aria-label="Facebook"><img src="images/facebook-logo.svg" width="24" height="24" alt="Facebook" loading="lazy" decoding="async"/></a>
+          <a href="https://www.linkedin.com/company/danxfoto/" aria-label="LinkedIn"><img src="images/linkedin-logo.svg" width="24" height="24" alt="LinkedIn" loading="lazy" decoding="async"/></a>
         </div>
       </div>
 
@@ -399,7 +419,7 @@
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-logo">
-        <img src="images/logo.png" alt="DanXFoto" class="footer-logo-img"/>
+        <img src="images/logo.png" alt="DanXFoto" class="footer-logo-img" width="1980" height="883" loading="lazy" decoding="async"/>
       </div>
       <p class="footer-copy">© 2026 DanXFoto Photography · Greater Boston Area, MA · All rights reserved</p>
       <div class="footer-links">
@@ -413,6 +433,10 @@
 
   <!-- GLightbox JS -->
   <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="js/config.js"></script>
+  <script>emailjs.init(_cfg.pk);</script>
   <script src="js/main.js"></script>
 </body>
 </html>
