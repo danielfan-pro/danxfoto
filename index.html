@@ -3,8 +3,19 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>DanXFoto · Photography</title>
-  <meta name="description" content="DanXFoto — Family & Portrait Photography in Boston, MA and beyond."/>
+  <title>DanXFoto | Boston Family & Portrait Photographer</title>
+  <meta name="description" content="DanXFoto offers family and portrait photography in Boston and the Greater Boston Area, creating relaxed sessions and timeless images for families, performers, and individuals."/>
+  <link rel="canonical" href="https://www.danxfoto.com/"/>
+  <meta property="og:site_name" content="DanXFoto"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="DanXFoto | Boston Family & Portrait Photographer"/>
+  <meta property="og:description" content="Family and portrait photography in Boston and the Greater Boston Area."/>
+  <meta property="og:url" content="https://www.danxfoto.com/"/>
+  <meta property="og:image" content="https://www.danxfoto.com/images/logo.png"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="DanXFoto | Boston Family & Portrait Photographer"/>
+  <meta name="twitter:description" content="Family and portrait photography in Boston and the Greater Boston Area."/>
+  <meta name="twitter:image" content="https://www.danxfoto.com/images/logo.png"/>
   <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="shortcut icon" href="/favicon.ico" />
@@ -20,6 +31,49 @@
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script src="js/config.js"></script>
   <script>emailjs.init(_cfg.pk);</script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "DanXFoto",
+      "description": "Family and portrait photography in Boston and the Greater Boston Area.",
+      "url": "https://www.danxfoto.com/",
+      "image": "https://www.danxfoto.com/images/logo.png",
+      "logo": "https://www.danxfoto.com/images/logo.png",
+      "telephone": "+1-617-454-4419",
+      "email": "hello@danxfoto.com",
+      "areaServed": [
+        "Boston, MA",
+        "Greater Boston Area"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Boston",
+        "addressRegion": "MA",
+        "addressCountry": "US"
+      },
+      "priceRange": "$$",
+      "sameAs": [
+        "https://www.instagram.com/danxfoto/",
+        "https://www.facebook.com/danxfoto/",
+        "https://www.linkedin.com/company/danxfoto/"
+      ],
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "name": "Portrait Session",
+          "price": "150",
+          "priceCurrency": "USD"
+        },
+        {
+          "@type": "Offer",
+          "name": "Family Session",
+          "price": "450",
+          "priceCurrency": "USD"
+        }
+      ]
+    }
+  </script>
 </head>
 <body>
 
@@ -31,7 +85,7 @@
         <div class="logo-divider"></div>
         <div class="logo-text">
           <span class="logo-name">Dan<em>X</em>Foto</span>
-          <span class="logo-tag">Photography · Boston MA</span>
+          <span class="logo-tag">Photography · Greater Boston Area</span>
         </div>
       </a>
       <ul class="nav-links">
@@ -50,13 +104,13 @@
   <section id="home" class="hero">
     <div class="hero-content">
       <p class="hero-eyebrow">Family · Portrait</p>
-      <h1 class="hero-title">Every moment<br>deserves to be <em>remembered</em></h1>
+      <h1 class="hero-title">Boston family & portrait<br>photography <em>remembered</em></h1>
       <div class="hero-divider">
         <span class="div-line"></span>
         <span class="div-diamond"></span>
         <span class="div-line"></span>
       </div>
-      <p class="hero-sub">Boston & Beyond</p>
+      <p class="hero-sub">Greater Boston Area & Beyond</p>
       <div class="hero-cta">
         <a href="#portfolio" class="btn-primary">View Portfolio</a>
         <a href="#contact" class="btn-ghost">Book a Session</a>
@@ -85,7 +139,8 @@
     
       <div class="portfolio-item portrait" data-cat="portrait">
         <a href="images/Portrait_1.jpg" class="glightbox" data-gallery="portfolio" data-title="Studio Session">
-          <div class="portfolio-img" style="background-image:url('images/Portrait_1.jpg'); background-size:cover; background-position:top center;">
+          <div class="portfolio-img">
+            <img src="images/Portrait_1.jpg" alt="Studio portrait session by DanXFoto in Boston" style="object-position: top center;" loading="lazy"/>
             <div class="portfolio-overlay">
               <span class="portfolio-cat">Portrait</span>
               <h3>Studio Session</h3>
@@ -96,7 +151,8 @@
 
       <div class="portfolio-item portrait" data-cat="portrait">
         <a href="images/Portrait_2.jpg" class="glightbox" data-gallery="portfolio" data-title="Studio Session">
-          <div class="portfolio-img" style="background-image:url('images/Portrait_2.jpg'); background-size:cover; background-position:center 20%;">
+          <div class="portfolio-img">
+            <img src="images/Portrait_2.jpg" alt="Creative portrait photography session in the Greater Boston Area" style="object-position: center 20%;" loading="lazy"/>
             <div class="portfolio-overlay">
               <span class="portfolio-cat">Portrait</span>
               <h3>Studio Session</h3>
@@ -107,7 +163,8 @@
 
       <div class="portfolio-item family" data-cat="family">
         <a href="images/Family_1.jpg" class="glightbox" data-gallery="portfolio" data-title="Chinese New Year Portraits">
-          <div class="portfolio-img" style="background-image:url('images/Family_1.jpg'); background-size:cover; background-position:center;">
+          <div class="portfolio-img">
+            <img src="images/Family_1.jpg" alt="Chinese New Year family portraits by DanXFoto in Boston" loading="lazy"/>
             <div class="portfolio-overlay">
               <span class="portfolio-cat">Family</span>
               <h3>Chinese New Year Portraits</h3>
@@ -118,7 +175,8 @@
 
       <div class="portfolio-item portrait tall" data-cat="portrait">
         <a href="images/Portrait_3.jpg" class="glightbox" data-gallery="portfolio" data-title="Recital Portraits">
-          <div class="portfolio-img" style="background-image:url('images/Portrait_3.jpg'); background-size:cover; background-position:center 20%;">
+          <div class="portfolio-img">
+            <img src="images/Portrait_3.jpg" alt="Recital portrait photography in Boston" style="object-position: center 20%;" loading="lazy"/>
             <div class="portfolio-overlay">
               <span class="portfolio-cat">Portrait</span>
               <h3>Recital Portraits</h3>
@@ -129,7 +187,8 @@
 
       <div class="portfolio-item family" data-cat="family">
         <a href="images/Family_2.jpg" class="glightbox" data-gallery="portfolio" data-title="Christmas Session">
-          <div class="portfolio-img" style="background-image:url('images/Family_2.jpg'); background-size:cover; background-position:center;">
+          <div class="portfolio-img">
+            <img src="images/Family_2.jpg" alt="Christmas family photography session in the Greater Boston Area" loading="lazy"/>
             <div class="portfolio-overlay">
               <span class="portfolio-cat">Family</span>
               <h3>Christmas Session</h3>
@@ -140,7 +199,8 @@
 
       <div class="portfolio-item portrait tall" data-cat="portrait">
         <a href="images/Portrait_4.jpg" class="glightbox" data-gallery="portfolio" data-title="Recital Portraits">
-          <div class="portfolio-img" style="background-image:url('images/Portrait_4.jpg'); background-size:cover; background-position:center 40%;">
+          <div class="portfolio-img">
+            <img src="images/Portrait_4.jpg" alt="Elegant recital portrait session by DanXFoto" style="object-position: center 40%;" loading="lazy"/>
             <div class="portfolio-overlay">
               <span class="portfolio-cat">Portrait</span>
               <h3>Recital Portraits</h3>
@@ -151,7 +211,8 @@
 
       <div class="portfolio-item portrait" data-cat="portrait">
         <a href="images/Portrait_5.jpg" class="glightbox" data-gallery="portfolio" data-title="Winter Portrait">
-          <div class="portfolio-img" style="background-image:url('images/Portrait_5.jpg'); background-size:cover; background-position:center;">
+          <div class="portfolio-img">
+            <img src="images/Portrait_5.jpg" alt="Winter portrait photography session in Boston" loading="lazy"/>
             <div class="portfolio-overlay">
               <span class="portfolio-cat">Portrait</span>
               <h3>Winter Portrait</h3>
@@ -168,7 +229,7 @@
     <div class="about-inner">
       <div class="about-img-wrap">
         <div class="about-img-placeholder">
-          <img src="images/Dan.jpg" alt="Dan"/>
+          <img src="images/Dan.jpg" alt="Dan, Boston family and portrait photographer"/>
           <div class="about-img-frame"></div>
         </div>
       </div>
@@ -181,12 +242,12 @@
           <span class="div-line"></span>
         </div>
         <p class="about-text">
-          I'm a Boston-based photographer with a passion for capturing the moments that matter most — 
+          I'm a Boston-based photographer serving the Greater Boston Area with a passion for capturing the moments that matter most — 
           the quiet glances, the joyful tears, the unscripted laughter. Every family has a story worth telling, 
           and I'm here to tell yours.
         </p>
         <p class="about-text">
-          I specialize in family, and portrait photography, bringing both technical skill and an artistic eye to every session. My approach is relaxed, personal, and always focused on capturing your unique moments.
+          I specialize in family and portrait photography, bringing both technical skill and an artistic eye to every session. My approach is relaxed, personal, and always focused on capturing your unique moments.
         </p>
         <a href="#contact" class="btn-primary">Work With Me</a>
       </div>
@@ -289,13 +350,13 @@
           </div>
           <div class="contact-item">
             <span class="contact-label">Based in</span>
-            <span>Boston, MA</span>
+            <span>Greater Boston Area, MA</span>
           </div>
         </div>
         <div class="social-links">
-          <a href="https://www.instagram.com/danxfoto/" aria-label="Instagram"><img src="images/instagram-logo.svg" width="24" /></a>
-          <a href="https://www.facebook.com/danxfoto/" aria-label="Facebook"><img src="images/facebook-logo.svg" width="24" /></a>
-          <a href="https://www.linkedin.com/company/danxfoto/" aria-label="LinkedIn"><img src="images/linkedin-logo.svg" width="24" /></a>
+          <a href="https://www.instagram.com/danxfoto/" aria-label="Instagram"><img src="images/instagram-logo.svg" width="24" alt="Instagram" loading="lazy"/></a>
+          <a href="https://www.facebook.com/danxfoto/" aria-label="Facebook"><img src="images/facebook-logo.svg" width="24" alt="Facebook" loading="lazy"/></a>
+          <a href="https://www.linkedin.com/company/danxfoto/" aria-label="LinkedIn"><img src="images/linkedin-logo.svg" width="24" alt="LinkedIn" loading="lazy"/></a>
         </div>
       </div>
 
@@ -340,7 +401,7 @@
       <div class="footer-logo">
         <img src="images/logo.png" alt="DanXFoto" class="footer-logo-img"/>
       </div>
-      <p class="footer-copy">© 2026 DanXFoto Photography · Boston, MA · All rights reserved</p>
+      <p class="footer-copy">© 2026 DanXFoto Photography · Greater Boston Area, MA · All rights reserved</p>
       <div class="footer-links">
         <a href="#home">Home</a>
         <a href="#portfolio">Portfolio</a>
