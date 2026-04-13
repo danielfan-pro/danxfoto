@@ -284,19 +284,43 @@
 
       <div class="service-card">
         <div class="service-icon">
-          <svg viewBox="0 0 40 40" fill="none">
-            <path d="M20 8 L32 14 L32 26 L20 32 L8 26 L8 14 Z" stroke="currentColor" stroke-width="1.5"/>
-            <circle cx="20" cy="20" r="5" stroke="currentColor" stroke-width="1.5"/>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="24" cy="16" r="7"/>
+            <path d="M10 42c0-7.732 6.268-14 14-14s14 6.268 14 14"/>
+          </svg>
+        </div>
+        <h3 class="service-title">Mini Session</h3>
+        <p class="service-price"><strong>$175</strong></p>
+        <ul class="service-features">
+          <li><strong>20-minute</strong> focused session</li>
+          <li><strong>Photographer-selected location</strong></li>
+          <li><strong>5 professionally edited</strong> high-resolution photos</li>
+          <li>Online gallery delivery</li>
+          <li>Print release included</li>
+          <li><em>Perfect for holiday cards or quick milestone updates</em></li>
+        </ul>
+        <a href="#contact" class="btn-service">Book Now</a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="24" cy="15" r="7"/>
+            <path d="M10 42c0-7.732 6.268-14 14-14s14 6.268 14 14"/>
+            <rect x="30" y="28" width="14" height="11" rx="2"/>
+            <circle cx="37" cy="33.5" r="3"/>
+            <path d="M33 28l1.5-2h5L41 28"/>
           </svg>
         </div>
         <h3 class="service-title">Portrait Session</h3>
-        <p class="service-price">From <strong>$150</strong></p>
+        <p class="service-price">From <strong>$275</strong></p>
         <ul class="service-features">
-          <li>1–2 hour session</li>
-          <li>1 location of your choice</li>
-          <li>20+ edited photos</li>
+          <li><strong>60-minute</strong> relaxed session</li>
+          <li><strong>1 location</strong> of your choice</li>
+          <li><strong>15 professionally edited</strong> high-resolution photos</li>
           <li>Online gallery delivery</li>
           <li>Print release included</li>
+          <li><em>Ideal for individuals, couples, or professional headshots</em></li>
         </ul>
         <a href="#contact" class="btn-service">Book Now</a>
       </div>
@@ -304,21 +328,24 @@
       <div class="service-card featured">
         <div class="service-badge">Most Popular</div>
         <div class="service-icon">
-          <svg viewBox="0 0 40 40" fill="none">
-            <path d="M8 30 Q20 8 32 30" stroke="currentColor" stroke-width="1.5"/>
-            <circle cx="20" cy="18" r="6" stroke="currentColor" stroke-width="1.5"/>
-            <path d="M14 30 L26 30" stroke="currentColor" stroke-width="1.5"/>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="13" cy="20" r="5"/>
+            <path d="M3 40 a10 10 0 0 1 20 0"/>
+            <circle cx="35" cy="20" r="5"/>
+            <path d="M25 40 a10 10 0 0 1 20 0"/>
+            <circle cx="24" cy="27" r="3.5"/>
+            <path d="M16.5 40 a7.5 7.5 0 0 1 15 0"/>
           </svg>
         </div>
         <h3 class="service-title">Family Session</h3>
-        <p class="service-price">From <strong>$450</strong></p>
+        <p class="service-price">From <strong>$495</strong></p>
         <ul class="service-features">
-          <li>2–3 hour session</li>
-          <li>Up to 2 locations</li>
-          <li>40+ edited photos</li>
+          <li><strong>90-minute</strong> storytelling session</li>
+          <li><strong>Up to 2 locations</strong></li>
+          <li><strong>25 professionally edited</strong> high-resolution photos</li>
           <li>Online gallery delivery</li>
           <li>Print release included</li>
-          <li>1 complimentary print</li>
+          <li><em>A comprehensive session across locations to capture your family's story.</em></li>
         </ul>
         <a href="#contact" class="btn-service">Book Now</a>
       </div>
@@ -395,6 +422,7 @@
           <label for="service">Session Type</label>
           <select id="service" name="service">
             <option value="">Select a service...</option>
+            <option value="mini">Mini</option>
             <option value="family">Family</option>
             <option value="portrait">Portrait</option>
             <option value="other">Other / Custom</option>
