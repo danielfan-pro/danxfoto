@@ -30,21 +30,31 @@
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "ProfessionalService",
+      "@type": [
+        "LocalBusiness",
+        "ProfessionalService"
+      ],
+      "@id": "https://www.danxfoto.com/#business",
       "name": "DanXFoto",
-      "description": "Family and portrait photography in Boston and the Greater Boston Area.",
+      "alternateName": "DanXFoto Photography",
+      "description": "DanXFoto is a family and portrait photography business based in Melrose, MA and serving Boston and the Greater Boston Area.",
       "url": "https://www.danxfoto.com/",
       "image": "https://www.danxfoto.com/images/logo.png",
       "logo": "https://www.danxfoto.com/images/logo.png",
       "telephone": "+1-617-454-4419",
       "email": "hello@danxfoto.com",
+      "founder": {
+        "@type": "Person",
+        "name": "Dan"
+      },
       "areaServed": [
+        "Melrose, MA",
         "Boston, MA",
         "Greater Boston Area"
       ],
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Boston",
+        "addressLocality": "Melrose",
         "addressRegion": "MA",
         "addressCountry": "US"
       },
@@ -54,20 +64,30 @@
         "https://www.facebook.com/danxfoto/",
         "https://www.linkedin.com/company/danxfoto/"
       ],
-      "makesOffer": [
-        {
-          "@type": "Offer",
-          "name": "Portrait Session",
-          "price": "150",
-          "priceCurrency": "USD"
-        },
-        {
-          "@type": "Offer",
-          "name": "Family Session",
-          "price": "450",
-          "priceCurrency": "USD"
-        }
-      ]
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Photography Sessions",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Mini Session",
+            "price": "175",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "Offer",
+            "name": "Portrait Session",
+            "price": "250",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "Offer",
+            "name": "Family Session",
+            "price": "450",
+            "priceCurrency": "USD"
+          }
+        ]
+      }
     }
   </script>
 </head>
@@ -262,7 +282,7 @@
           <span class="div-line"></span>
         </div>
         <p class="about-text">
-          I'm a Boston-based photographer serving the Greater Boston Area with a passion for capturing the moments that matter most — 
+          I'm a photographer based in Melrose, MA and serving Boston and the Greater Boston Area, with a passion for capturing the moments that matter most — 
           the quiet glances, the joyful tears, the unscripted laughter. Every family has a story worth telling, 
           and I'm here to tell yours.
         </p>
@@ -397,7 +417,7 @@
           </div>
           <div class="contact-item">
             <span class="contact-label">Based in</span>
-            <span>Greater Boston Area, MA</span>
+            <span>Melrose, MA</span>
           </div>
         </div>
         <div class="social-links">
@@ -449,7 +469,7 @@
       <div class="footer-logo">
         <img src="images/logo.png" alt="DanXFoto" class="footer-logo-img" width="1980" height="883" loading="lazy" decoding="async"/>
       </div>
-      <p class="footer-copy">© 2026 DanXFoto Photography · Greater Boston Area, MA · All rights reserved</p>
+      <p class="footer-copy">© 2026 DanXFoto Photography · All rights reserved</p>
       <div class="footer-links">
         <a href="#home">Home</a>
         <a href="#portfolio">Portfolio</a>
